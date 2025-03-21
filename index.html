@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India's State Animals: A Wildlife Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0F1516; /* Darkest color from palette */
+            color: #E0E0E0; /* Light gray for text readability */
+            margin: 0;
+            padding: 20px;
+        }
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1A2526; /* Slightly lighter dark teal */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            color: #E0E0E0;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #252F30; /* Dark teal for question background */
+            border-radius: 5px;
+        }
+        .question p {
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #3A4445; /* Medium gray-teal for options */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .options label:hover {
+            background-color: #2E3536; /* Slightly lighter on hover */
+        }
+        #submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #2E3536; /* Button color */
+            color: #E0E0E0;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #submit-btn:hover {
+            background-color: #3A4445; /* Lighter on hover */
+        }
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #252F30;
+            border-radius: 5px;
+            display: none;
+        }
+        .correct {
+            color: #4CAF50; /* Green for correct answers */
+        }
+        .incorrect {
+            color: #F44336; /* Red for incorrect answers */
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Vijay Fans Quiz</h1>
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Which of the following animals is the designated State Animal of Andhra Pradesh?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A) Red Panda</label>
+                    <label><input type="radio" name="q1" value="B"> B) Blackbuck</label>
+                    <label><input type="radio" name="q1" value="C"> C) One-Horned Rhinoceros</label>
+                    <label><input type="radio" name="q1" value="D"> D) Indian Elephant</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Arunachal Pradesh is known for its diverse fauna. Which animal proudly represents the state as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A) Gayal</label>
+                    <label><input type="radio" name="q2" value="B"> B) Red Panda</label>
+                    <label><input type="radio" name="q2" value="C"> C) Snow Leopard</label>
+                    <label><input type="radio" name="q2" value="D"> D) Bengal Tiger</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Which of these animals is a unique symbol of Assam, holding the title of its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A) Asiatic Lion</label>
+                    <label><input type="radio" name="q3" value="B"> B) Swamp Deer</label>
+                    <label><input type="radio" name="q3" value="C"> C) One-Horned Rhinoceros</label>
+                    <label><input type="radio" name="q3" value="D"> D) Indian Bison</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Which animal is proudly recognized as the State Animal of Bihar?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A) Gaur</label>
+                    <label><input type="radio" name="q4" value="B"> B) Nilgai (Blue Bull)</label>
+                    <label><input type="radio" name="q4" value="C"> C) Indian Elephant</label>
+                    <label><input type="radio" name="q4" value="D"> D) Hangul (Kashmir Stag)</label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Chhattisgarh, known for its forests, has which animal as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A) Wild Water Buffalo</label>
+                    <label><input type="radio" name="q5" value="B"> B) Barasingha</label>
+                    <label><input type="radio" name="q5" value="C"> C) Leopard</label>
+                    <label><input type="radio" name="q5" value="D"> D) Lion-tailed Macaque</label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. Which of the following majestic animals is the designated State Animal of Goa?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A) Sloth Bear</label>
+                    <label><input type="radio" name="q6" value="B"> B) Gaur</label>
+                    <label><input type="radio" name="q6" value="C"> C) Leopard</label>
+                    <label><input type="radio" name="q6" value="D"> D) Indian Giant Squirrel</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <p>7. Gujarat is famed for its Gir Forest. Which of these animals is the State Animal of Gujarat?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A) Bengal Tiger</label>
+                    <label><input type="radio" name="q7" value="B"> B) Asiatic Lion</label>
+                    <label><input type="radio" name="q7" value="C"> C) Indian Leopard</label>
+                    <label><input type="radio" name="q7" value="D"> D) Elephant</label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <p>8. Which of the following animals holds the prestigious title of State Animal of Haryana?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A) Blackbuck</label>
+                    <label><input type="radio" name="q8" value="B"> B) Tiger</label>
+                    <label><input type="radio" name="q8" value="C"> C) Sambar Deer</label>
+                    <label><input type="radio" name="q8" value="D"> D) Lion</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <p>9. The mountainous state of Himachal Pradesh has chosen which of these animals as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A) Snow Leopard</label>
+                    <label><input type="radio" name="q9" value="B"> B) Tibetan Wolf</label>
+                    <label><input type="radio" name="q9" value="C"> C) Musk Deer</label>
+                    <label><input type="radio" name="q9" value="D"> D) Brown Bear</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <p>10. Which magnificent animal has been designated as the State Animal of Jharkhand?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A) Sambar Deer</label>
+                    <label><input type="radio" name="q10" value="B"> B) Indian Elephant</label>
+                    <label><input type="radio" name="q10" value="C"> C) Leopard</label>
+                    <label><input type="radio" name="q10" value="D"> D) Tiger</label>
+                </div>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question">
+                <p>11. Karnataka, rich in biodiversity, has which of these animals as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q11" value="A"> A) Sloth Bear</label>
+                    <label><input type="radio" name="q11" value="B"> B) Indian Elephant</label>
+                    <label><input type="radio" name="q11" value="C"> C) Black Panther</label>
+                    <label><input type="radio" name="q11" value="D"> D) Nilgai</label>
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question">
+                <p>12. Which iconic animal is recognized as the State Animal of Kerala?</p>
+                <div class="options">
+                    <label><input type="radio" name="q12" value="A"> A) Tiger</label>
+                    <label><input type="radio" name="q12" value="B"> B) Lion-tailed Macaque</label>
+                    <label><input type="radio" name="q12" value="C"> C) Indian Elephant</label>
+                    <label><input type="radio" name="q12" value="D"> D) Gaur</label>
+                </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question">
+                <p>13. Which of the following animals represents the state of Madhya Pradesh as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q13" value="A"> A) Barasingha (Swamp Deer)</label>
+                    <label><input type="radio" name="q13" value="B"> B) Bengal Tiger</label>
+                    <label><input type="radio" name="q13" value="C"> C) Leopard</label>
+                    <label><input type="radio" name="q13" value="D"> D) Chital (Spotted Deer)</label>
+                </div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question">
+                <p>14. Maharashtra has designated which of the following animals as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q14" value="A"> A) Indian Giant Squirrel</label>
+                    <label><input type="radio" name="q14" value="B"> B) Leopard</label>
+                    <label><input type="radio" name="q14" value="C"> C) Tiger</label>
+                    <label><input type="radio" name="q14" value="D"> D) Blackbuck</label>
+                </div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question">
+                <p>15. What unique animal is the State Animal of Manipur?</p>
+                <div class="options">
+                    <label><input type="radio" name="q15" value="A"> A) Red Panda</label>
+                    <label><input type="radio" name="q15" value="B"> B) Sangai (Brow-antlered Deer)</label>
+                    <label><input type="radio" name="q15" value="C"> C) Clouded Leopard</label>
+                    <label><input type="radio" name="q15" value="D"> D) Slow Loris</label>
+                </div>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="question">
+                <p>16. Which of the following animals is recognized as the State Animal of Meghalaya?</p>
+                <div class="options">
+                    <label><input type="radio" name="q16" value="A"> A) Clouded Leopard</label>
+                    <label><input type="radio" name="q16" value="B"> B) Golden Langur</label>
+                    <label><input type="radio" name="q16" value="C"> C) Red Panda</label>
+                    <label><input type="radio" name="q16" value="D"> D) Indian Elephant</label>
+                </div>
+            </div>
+
+            <!-- Question 17 -->
+            <div class="question">
+                <p>17. Mizoram, a state with rich biodiversity, has which animal as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q17" value="A"> A) Slow Loris</label>
+                    <label><input type="radio" name="q17" value="B"> B) Serow</label>
+                    <label><input type="radio" name="q17" value="C"> C) Gaur</label>
+                    <label><input type="radio" name="q17" value="D"> D) Tiger</label>
+                </div>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="question">
+                <p>18. Which of these animals holds the honor of being the State Animal of Nagaland?</p>
+                <div class="options">
+                    <label><input type="radio" name="q18" value="A"> A) Mithun</label>
+                    <label><input type="radio" name="q18" value="B"> B) Tiger</label>
+                    <label><input type="radio" name="q18" value="C"> C) Gaur</label>
+                    <label><input type="radio" name="q18" value="D"> D) Leopard</label>
+                </div>
+            </div>
+
+            <!-- Question 19 -->
+            <div class="question">
+                <p>19. Which of the following majestic animals is the designated State Animal of Odisha?</p>
+                <div class="options">
+                    <label><input type="radio" name="q19" value="A"> A) Sambar Deer</label>
+                    <label><input type="radio" name="q19" value="B"> B) Tiger</label>
+                    <label><input type="radio" name="q19" value="C"> C) Indian Elephant</label>
+                    <label><input type="radio" name="q19" value="D"> D) Blackbuck</label>
+                </div>
+            </div>
+
+            <!-- Question 20 -->
+            <div class="question">
+                <p>20. What animal proudly represents the state of Punjab as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q20" value="A"> A) Blackbuck</label>
+                    <label><input type="radio" name="q20" value="B"> B) Tiger</label>
+                    <label><input type="radio" name="q20" value="C"> C) One-Horned Rhinoceros</label>
+                    <label><input type="radio" name="q20" value="D"> D) Asiatic Lion</label>
+                </div>
+            </div>
+
+            <!-- Question 21 -->
+            <div class="question">
+                <p>21. Rajasthan, the land of kings, has designated which animal as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q21" value="A"> A) Camel and Chinkara</label>
+                    <label><input type="radio" name="q21" value="B"> B) Tiger</label>
+                    <label><input type="radio" name="q21" value="C"> C) Lion</label>
+                    <label><input type="radio" name="q21" value="D"> D) Wild Ass</label>
+                </div>
+            </div>
+
+            <!-- Question 22 -->
+            <div class="question">
+                <p>22. Which of the following animals is recognised as the State Animal of Sikkim?</p>
+                <div class="options">
+                    <label><input type="radio" name="q22" value="A"> A) Snow Leopard</label>
+                    <label><input type="radio" name="q22" value="B"> B) Red Panda</label>
+                    <label><input type="radio" name="q22" value="C"> C) Musk Deer</label>
+                    <label><input type="radio" name="q22" value="D"> D) Serow</label>
+                </div>
+            </div>
+
+            <!-- Question 23 -->
+            <div class="question">
+                <p>23. Which animal has been chosen as the State Animal of Tamil Nadu?</p>
+                <div class="options">
+                    <label><input type="radio" name="q23" value="A"> A) Nilgiri Tahr</label>
+                    <label><input type="radio" name="q23" value="B"> B) Lion-tailed Macaque</label>
+                    <label><input type="radio" name="q23" value="C"> C) Tiger</label>
+                    <label><input type="radio" name="q23" value="D"> D) Leopard</label>
+                </div>
+            </div>
+
+            <!-- Question 24 -->
+            <div class="question">
+                <p>24. Which of the following animals is the official State Animal of Telangana?</p>
+                <div class="options">
+                    <label><input type="radio" name="q24" value="A"> A) Chital</label>
+                    <label><input type="radio" name="q24" value="B"> B) Blackbuck</label>
+                    <label><input type="radio" name="q24" value="C"> C) Spotted Deer</label>
+                    <label><input type="radio" name="q24" value="D"> D) Barasingha</label>
+                </div>
+            </div>
+
+            <!-- Question 25 -->
+            <div class="question">
+                <p>25. Which of the following animals is the State Animal of Tripura?</p>
+                <div class="options">
+                    <label><input type="radio" name="q25" value="A"> A) Phayre's Langur</label>
+                    <label><input type="radio" name="q25" value="B"> B) Clouded Leopard</label>
+                    <label><input type="radio" name="q25" value="C"> C) Slow Loris</label>
+                    <label><input type="radio" name="q25" value="D"> D) Serow</label>
+                </div>
+            </div>
+
+            <!-- Question 26 -->
+            <div class="question">
+                <p>26. Which of the following animals is the State Animal of Uttar Pradesh?</p>
+                <div class="options">
+                    <label><input type="radio" name="q26" value="A"> A) Barasingha (Swamp Deer)</label>
+                    <label><input type="radio" name="q26" value="B"> B) Chital</label>
+                    <label><input type="radio" name="q26" value="C"> C) Blackbuck</label>
+                    <label><input type="radio" name="q26" value="D"> D) Sambar Deer</label>
+                </div>
+            </div>
+
+            <!-- Question 27 -->
+            <div class="question">
+                <p>27. Which of the following animals is the State Animal of Uttarakhand?</p>
+                <div class="options">
+                    <label><input type="radio" name="q27" value="A"> A) Snow Leopard</label>
+                    <label><input type="radio" name="q27" value="B"> B) Himalayan Monal</label>
+                    <label><input type="radio" name="q27" value="C"> C) Musk Deer</label>
+                    <label><input type="radio" name="q27" value="D"> D) Bharal (Blue Sheep)</label>
+                </div>
+            </div>
+
+            <!-- Question 28 -->
+            <div class="question">
+                <p>28. Which of the following animals represents West Bengal as its State Animal?</p>
+                <div class="options">
+                    <label><input type="radio" name="q28" value="A"> A) Fishing Cat</label>
+                    <label><input type="radio" name="q28" value="B"> B) Bengal Tiger</label>
+                    <label><input type="radio" name="q28" value="C"> C) Elephant</label>
+                    <label><input type="radio" name="q28" value="D"> D) One-Horned Rhinoceros</label>
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn">Submit Quiz</button>
+        </form>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "B",
+            q2: "A",
+            q3: "C",
+            q4: "A",
+            q5: "A",
+            q6: "B",
+            q7: "B",
+            q8: "A",
+            q9: "A",
+            q10: "B",
+            q11: "B",
+            q12: "C",
+            q13: "A",
+            q14: "A",
+            q15: "B",
+            q16: "A",
+            q17: "B",
+            q18: "A",
+            q19: "A",
+            q20: "A",
+            q21: "A",
+            q22: "B",
+            q23: "A",
+            q24: "A",
+            q25: "A",
+            q26: "A",
+            q27: "C",
+            q28: "A"
+        };
+
+        const explanations = {
+            q1: "The Blackbuck (Antilope cervicapra) is officially recognized as the State Animal of Andhra Pradesh. It's a graceful antelope species found in several parts of India, including the plains of Andhra Pradesh.",
+            q2: "The Gayal (Bos frontalis), also known as Mithun, is the State Animal of Arunachal Pradesh. It's a semi-domesticated bovine species that holds significant cultural and economic importance for the tribal communities in the state.",
+            q3: "The One-Horned Rhinoceros (Rhinoceros unicornis) is the State Animal of Assam. Kaziranga National Park in Assam is home to the largest population of this vulnerable species.",
+            q4: "The Gaur (Bos gaurus), also known as the Indian Bison, is the State Animal of Bihar. It is a large bovine native to South Asia and Southeast Asia.",
+            q5: "The Wild Water Buffalo (Bubalus arnee) is the State Animal of Chhattisgarh. This endangered species is found in fragmented populations across India, including the forests of Chhattisgarh.",
+            q6: "The Gaur (Bos gaurus), also known as the Indian Bison, is the State Animal of Goa. This large bovine is found in the forests of Goa and other parts of India.",
+            q7: "The Asiatic Lion (Panthera leo persica) is the State Animal of Gujarat. The Gir Forest National Park in Gujarat is the only place in the world where Asiatic Lions are found in the wild.",
+            q8: "The Blackbuck (Antilope cervicapra) is the State Animal of Haryana. This graceful antelope is found in parts of the state.",
+            q9: "The Snow Leopard (Panthera uncia) is the State Animal of Himachal Pradesh. These elusive cats are well-adapted to the high-altitude, cold environments of the Himalayas.",
+            q10: "The Indian Elephant (Elephas maximus indicus) is the State Animal of Jharkhand. Elephant populations are found in the forests of the state.",
+            q11: "The Indian Elephant (Elephas maximus indicus) is the State Animal of Karnataka. Karnataka has a significant elephant population, and they are an integral part of the state's ecosystem.",
+            q12: "The Indian Elephant (Elephas maximus indicus) is the State Animal of Kerala. Kerala has a rich tradition of elephant ownership and a significant population of wild elephants.",
+            q13: "The Barasingha (Rucervus duvaucelii), also known as the Swamp Deer, is the State Animal of Madhya Pradesh. Kanha National Park in Madhya Pradesh is famous for its Barasingha population.",
+            q14: "The Indian Giant Squirrel (Ratufa indica), also known as the Malabar Giant Squirrel, is the State Animal of Maharashtra. This colorful and large squirrel species is found in the forests of the state.",
+            q15: "The Sangai (Rucervus eldii eldii), also known as the Brow-antlered Deer or the Dancing Deer, is the State Animal of Manipur. It's an endangered species endemic to Manipur, found in the Keibul Lamjao National Park.",
+            q16: "The Clouded Leopard (Neofelis nebulosa) is the State Animal of Meghalaya. This elusive and beautiful cat species is found in the forests of the state.",
+            q17: "The Serow (Capricornis thar), a goat-antelope, is the State Animal of Mizoram. It is an herbivore native to Southeast Asia.",
+            q18: "The Mithun (Bos frontalis) is the State Animal of Nagaland. This semi-domesticated bovine is significant for the cultural and economic lives of the Naga people.",
+            q19: "The Sambar Deer (Rusa unicolor) is the State Animal of Odisha. This deer species is found in the forests of the state.",
+            q20: "The Blackbuck (Antilope cervicapra) is the State Animal of Punjab. This elegant antelope is found in specific regions of the state.",
+            q21: "Rajasthan has two State Animals: the Camel (Camelus dromedarius) for livestock, and the Chinkara (Gazella bennettii) for the wildlife category.",
+            q22: "The Red Panda (Ailurus fulgens) is the State Animal of Sikkim. This adorable arboreal mammal is found in the forests of the Eastern Himalayas.",
+            q23: "The Nilgiri Tahr (Nilgiritragus hylocrius) is the State Animal of Tamil Nadu. This endangered mountain goat is endemic to the Nilgiri Hills and parts of the Western Ghats.",
+            q24: "The Chital (Axis axis), also known as the Spotted Deer, is the State Animal of Telangana. This deer is commonly found in the forests of the state.",
+            q25: "The Phayre's Langur (Trachypithecus phayrei), also known as Phayre's leaf monkey, is the State Animal of Tripura. It is a primate species found in Southeast Asia.",
+            q26: "The Barasingha (Rucervus duvaucelii), also known as the Swamp Deer, is the State Animal of Uttar Pradesh.",
+            q27: "The Musk Deer (Moschus chrysogaster) is the State Animal of Uttarakhand. This elusive deer is found in the high-altitude regions of the Himalayas.",
+            q28: "The Fishing Cat (Prionailurus viverrinus) is the State Animal of West Bengal. This medium-sized wild cat specializes in hunting fish and is found in wetlands throughout the state."
+        };
+
+        document.getElementById("quiz-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let score = 0;
+            let resultsHTML = "<h2>Quiz Results</h2>";
+
+            for (let i = 1; i <= 28; i++) {
+                const questionName = `q${i}`;
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                const correctAnswer = correctAnswers[questionName];
+                const questionText = document.querySelector(`input[name="${questionName}"]`).closest(".question").querySelector("p").textContent;
+
+                if (selectedOption) {
+                    const userAnswer = selectedOption.value;
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                        resultsHTML += `<p><span class="correct">Question ${i}: Correct!</span> ${questionText}<br>Explanation: ${explanations[questionName]}</p>`;
+                    } else {
+                        resultsHTML += `<p><span class="incorrect">Question ${i}: Incorrect.</span> ${questionText}<br>Your answer: ${userAnswer}, Correct answer: ${correctAnswer}<br>Explanation: ${explanations[questionName]}</p>`;
+                    }
+                } else {
+                    resultsHTML += `<p><span class="incorrect">Question ${i}: Not answered.</span> ${questionText}<br>Correct answer: ${correctAnswer}<br>Explanation: ${explanations[questionName]}</p>`;
+                }
+            }
+
+            alert(`Your score: ${score}/28`);
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = resultsHTML;
+            resultsDiv.style.display = "block";
+            window.scrollTo(0, resultsDiv.offsetTop);
+        });
+    </script>
+</body>
+</html>
